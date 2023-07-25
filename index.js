@@ -21,6 +21,16 @@ const server = http.createServer((req, res) => {
                     res.end(data)
                 }
             })
+        }else if(req.url === '/api/user') {
+            const user = {
+                name: 'Blessing Sunday',
+                email: 'sundayn@gmail.com',
+                age: 24,
+            }
+            res.writeHead(200, {
+                'Content-Type': 'application/json'
+            });
+            res.end(JSON.stringify(user))
         }
     }
 });

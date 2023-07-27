@@ -1,37 +1,8 @@
 const http = require ('http');
 const fs = require('fs');
-// const express = require('express');
-// const morgan = require('morgan')
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// const app = express();
-
-// app.use(morgan('dev'));
-
-// app.get('/', (req, res) => {
-//     res.send('Hello, Node.js!')
-// })
-
-// app.get('/file', (req, res, next) => {
-//     fs.readFile('data.txt', 'utf-8', (err, data) => {
-//         if(err) {
-//             console.log(err);
-//             return res.status(500).send('Error reading file');
-//         }
-//         res.send(data)
-//     })
-
-// })
-
-// app.get('/api/user', (req, res) => {
-//     const user = {
-//         name: 'Blessing Sunday',
-//         email: 'sundayn@gmail.com',
-//         age: 24,
-//     };
-//     res.json(user);
-// });
 
 const server = http.createServer((req, res) => {
     console.log(`Received request for ${req.url}`);

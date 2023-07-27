@@ -6,5 +6,4 @@
 
 ## Dependencies
 
- - Morgan
- - Express
+ - Vanilla Nodejs
